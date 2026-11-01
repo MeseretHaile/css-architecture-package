@@ -28,8 +28,10 @@
   }
 
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
     line-height: 1.5;
+    background-color: var(--color-bg);
+    color: var(--color-text);
   }
 
   img {
@@ -51,7 +53,7 @@
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  .site-footer
+  .site-footer;
 }
 
 @layer components {
