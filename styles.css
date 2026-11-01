@@ -13,8 +13,6 @@
 }
 @layer base {
   :root {
- @layer base {
-  :root {
     --color-bg: #faf7f2;
     --color-text: #303030;
     --color-surface: #ede3d5;
@@ -27,7 +25,6 @@
     --space-md: 16px;
     --space-lg: 32px;
     --font-body: Arial, Helvetica, sans-serif;
-
   }
 
   body {
@@ -35,18 +32,26 @@
     line-height: 1.5;
   }
 
-  img{
+  img {
     max-width: 100%;
   }
 }
-}
 
 @layer layout {
-  .site-header{
+  .site-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md);
+    background-color: var(--color-champagne);
+    color: var(--color-text);
   }
-  /* Add page-level layout and composition classes here. */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .site-footer
 }
 
 @layer components {
