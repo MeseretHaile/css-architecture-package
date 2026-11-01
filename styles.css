@@ -48,18 +48,18 @@
     background-color: var(--color-champagne);
     color: var(--color-text);
   }
-  .gallery-grid {
+  .card {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-md);
-    max-width: 600px;
+    max-width: 700px;
+    width: 100%;
   }
   .site-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--space-md);
-    background-color: var(--color-champagne);
     margin-top: var(--space-lg);
   }
   .hero {
@@ -69,14 +69,20 @@
 }
 
 @layer components {
-  nav ul {
+  .logo {
+    color: var(--color-main);
+    font-family: cursive;
+    font-size: 32px;
+    text-decoration: none;
+  }
+  .site-nav ul {
     display: flex;
     list-style: none;
     gap: var(--space-md);
   }
-  nav a {
+  .site-nav a {
     text-decoration: none;
-    color: #303030;
+    color: var(--color-text);
   }
   .button {
     display: inline-block;
@@ -88,17 +94,66 @@
     color: var(--color-text);
     font-weight: bold;
     box-shadow: 0 4px 4px var(--color-text);
-    align-items: center;
+    margin-top: var(--space-lg);
+    text-align: center;
+  }
+  .card {
+    --card-bg: var(--color-surface);
+    background-color: var(--card-bg);
+    padding: var(--space-md);
+    border: 1px solid var(--color-champagne);
+    border-radius: var(--radius);
+  }
+  .card img {
+    width: 100%;
+  }
+  .site-footer {
+    background-color: var(--color-champagne);
+  }
+}
+@layer utilities {
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+  .center {
+    text-align: center;
+  }
+  .space-top {
+    margin-top: var(--space-lg);
+  }
+}
+@layer states {
+  .site-nav a:hover,
+  .site-footer a:hover {
+    background-color: var(--color-main);
+  }
+  .button:hover {
+    background-color: var(--color-main);
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: var(--focus-outline);
+  }
+  .site-nav a[aria-current="page"] {
+    font-weight: bold;
+    text-decoration: underline;
   }
 }
 
-@layer utilities {
-}
-
-@layer overrides {
-  /* Keep this layer small. Use it only for intentional exceptions. */
-}
-
 @media print {
-  /* Add print improvements here. */
+  body {
+    background-color: white;
+    color: black;
+  }
+  .site-header,
+  .site-footer,
+  .button {
+    display: none;
+  }
 }
