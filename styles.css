@@ -40,14 +40,14 @@
 }
 /* Mobile-first design styles*/
 @layer layout {
-  .site-header {
+  .site-header,
+  .site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--space-md);
-    background-color: var(--color-champagne);
-    color: var(--color-text);
   }
+
   .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -68,10 +68,6 @@
   }
 
   .site-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--space-md);
     margin-top: var(--space-lg);
   }
   .hero {
@@ -94,6 +90,11 @@
   }
   .site-nav a {
     text-decoration: none;
+    color: var(--color-text);
+  }
+  .site-header,
+  .site-footer {
+    background-color: var(--color-champagne);
     color: var(--color-text);
   }
   .button {
@@ -119,9 +120,6 @@
   .card img {
     width: 100%;
   }
-  .site-footer {
-    background-color: var(--color-champagne);
-  }
 }
 @layer utilities {
   .visually-hidden {
@@ -142,11 +140,9 @@
 }
 @layer states {
   .site-nav a:hover,
-  .site-footer a:hover {
+  .site-footer a:hover,  .button:hover  {
     background-color: var(--color-main);
   }
-  .button:hover {
-    background-color: var(--color-main);
   }
   a:focus-visible,
   button:focus-visible {
