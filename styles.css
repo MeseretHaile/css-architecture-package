@@ -40,6 +40,11 @@
 }
 /* Mobile-first design styles*/
 @layer layout {
+  .wrapper {
+    inline-size: 90%;
+    max-inline-size: 1200px;
+    margin-inline: auto;
+  }
   .site-header,
   .site-footer {
     display: flex;
@@ -140,9 +145,9 @@
 }
 @layer states {
   .site-nav a:hover,
-  .site-footer a:hover,  .button:hover  {
+  .site-footer a:hover,
+  .button:hover {
     background-color: var(--color-main);
-  }
   }
   a:focus-visible,
   button:focus-visible {
