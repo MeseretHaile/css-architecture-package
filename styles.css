@@ -91,6 +91,39 @@
     background-color: var(--color-champagne);
     color: var(--color-text);
   }
+  #menu {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-text);
+    box-shadow: 0 7px var(--color-text), 0 -7px var(--color-text);
+    margin-right: 25px;
+  }
+
+  @media (max-width: 600px) {
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      padding: var(--space-sm) 0;
+    }
+
+    .site-nav ul {
+      display: none;
+    }
+
+    #menu:checked ~ ul {
+      display: block;
+    }
+  }
   .button {
     display: inline-block;
     padding: var(--space-sm);
