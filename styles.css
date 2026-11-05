@@ -68,6 +68,10 @@
     display: block;
     width: 100%;
   }
+  .about {
+    max-inline-size: 800px;
+    padding-block: var(--space-lg);
+  }
 }
 
 @layer components {
