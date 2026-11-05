@@ -8,14 +8,17 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href=""><img src=""" alt="" /></a>
-      <p>Fancy Event Rentals</p>
-      <nav>
+      <div>
+        <img src="" alt="" />
+        <p class="logo">Fancy Event Rentals</p>
+      </div>
+
+      <nav class="site-nav">
         <ul>
-          <li>Home</li>
-          <li>Rentals</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -25,19 +28,23 @@
         <img class="hero" src="images/hero.jpeg" alt="" />
       </section>
       <!--Gallery Section-->
-      <section class="Gallery">
-        <h1>Event Gallery</h1>
-        <div>
+      <section class="card wrapper">
+        <h1 class="center">Event Gallery</h1>
+        <div class="gallery-grid">
           <img src="images/balloonbackdrop.jpeg" alt="" />
           <img src="images/grad.jpeg" alt="" />
           <img src="images/tablesetup2.jpeg" alt="" />
           <img src="images/mascot.jpeg" alt="" />
+          <img src="images/GradWhite.jpeg" alt="" />
+          <img src="images/yard.jpeg" alt="" />
         </div>
-        <a class="button" href="rentals.html">More</a>
+        <div class="center">
+          <a class="button" href="rentals.html">More</a>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
-      <section>
+      <section class="wrapper">
         <img src="" alt="" />
         <p>Fancy Event Rentals</p>
       </section>
