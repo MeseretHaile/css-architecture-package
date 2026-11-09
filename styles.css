@@ -159,8 +159,11 @@
     width: 100%;
     border-radius: var(--radius);
   }
-  .rental-grid .card {
-    container-type: inline-size;
+
+  @supports (container-type: inline-size) {
+    .rental-grid .card {
+      container-type: inline-size;
+    }
   }
   .rental-grid .card img {
     display: block;
