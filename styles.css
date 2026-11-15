@@ -26,11 +26,13 @@
     --space-lg: 32px;
     --font-body: Arial, Helvetica, sans-serif;
     --font-logo: "Luxurious Script", cursive;
+    --font-size-body: 1rem;
   }
 
   body {
     font-family: var(--font-body);
     line-height: 1.5;
+    font-size: var(--font-size-body);
     background-color: var(--color-bg);
     color: var(--color-text);
   }
@@ -53,7 +55,10 @@
     align-items: center;
     padding: var(--space-md);
   }
-
+  .site-header {
+    padding-block: var(--space-sm);
+    padding-inline: var(--space-md);
+  }
   .gallery-grid,
   .rental-grid {
     display: grid;
@@ -67,6 +72,9 @@
   .hero {
     display: block;
     width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
   }
   .about {
     max-inline-size: 800px;
@@ -85,12 +93,14 @@
     font-family: var(--font-logo);
     font-size: var(--space-lg);
     text-decoration: none;
+    margin-block: 0;
   }
   .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
   }
   .site-nav ul {
     display: flex;
@@ -106,6 +116,7 @@
     background-color: var(--color-champagne);
     color: var(--color-text);
   }
+
   #menu {
     position: absolute;
     opacity: 0;
@@ -124,7 +135,7 @@
     margin-right: 25px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     .hamburger {
       display: block;
       cursor: pointer;
@@ -165,6 +176,7 @@
     padding: var(--space-md);
     border: 1px solid var(--color-champagne);
     border-radius: var(--radius);
+    margin-top: var(--space-lg);
   }
   .card img {
     width: 100%;
@@ -194,6 +206,28 @@
       align-items: center;
       gap: var(--space-md);
     }
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .social p {
+    margin: 0;
+  }
+
+  .social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    display: block;
   }
 }
 @layer utilities {
