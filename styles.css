@@ -229,6 +229,10 @@
     object-fit: contain;
     display: block;
   }
+  .contact {
+    text-align: center;
+    padding-block: var(--space-lg);
+  }
 }
 @layer utilities {
   .visually-hidden {
